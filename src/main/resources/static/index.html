@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat application</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div id = "username-page">
+    <div class = "username-page-container">
+        <h1 class="title">entrer votre nom s'il vous plait</h1>
+        <form id="username-form" name="username">
+            <div class="form-group">
+                <input type="text" id ="nom" placeholder="nom ..." class="input">
+                <button type="submit" class="submit">commencez chat</button>
+            </div>
+        </form>
+    </div>
+    </div>
+<div id="chat-page" class="hidden">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2> application ilyass eladi</h2>
+        </div>
+        <div class="connecting">
+            Connecting ...
+        </div>
+        <ul id="messageArea">
+
+        </ul>
+        <form id ="messageForm" name="messageForm">
+            <div class ="form-group">
+                <div class="input-group clearfix">
+                    <input type="text" id="message" placeholder="entrez message...">
+                    <button type="submit" class="primary">envoyer</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+    
+    <!-- Ajoute ces deux scripts pour SockJS et Stomp.js -->
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
