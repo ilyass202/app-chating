@@ -15,10 +15,11 @@ public class MessageControleur {
     @MessageMapping("chat/Message")
     @SendTo("/topic/public")
     public ChatModel chatMethode(@Payload ChatModel chat){
+        System.out.println("message recu" + chat.getContent());
         return chat ;
     }
 
-    //methode pour recuperer le nom de l'utilisateur dans la session web Socket
+    //method to get the username
     @MessageMapping("chat/user")
     @SendTo("/topic/public")
     public ChatModel chatUser(@Payload ChatModel chat , SimpMessageHeaderAccessor header){

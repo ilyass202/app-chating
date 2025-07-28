@@ -44,7 +44,7 @@ function onConnect(){
     //we subscribe to the Topic before sending anything
     stompClient.subscribe("/topic/public", onMessagingReiceived);
     console.log("Abonnement à /topic/public effectué");
-    //we send to the message to appropriate url 
+    //we send  username after connecting to the websocket server
     stompClient.send("/app/chat/user", {}, JSON.stringify({sender: username, status: 'JOIN'}));
     connecting.classList.add('hidden');
 }
