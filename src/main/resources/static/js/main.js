@@ -30,7 +30,7 @@ function connect(event){
         usernamePage.classList.add("hidden");
         chatPage.classList.remove("hidden");
         console.log("Affichage chat-page OK");
-        var socket = new SockJS("/ws");
+        var socket = new SockJS("/ws");//w
         stompClient = Stomp.over(socket);
         console.log("Tentative de connexion WebSocket");
         stompClient.connect({}, onConnect, onerror);
